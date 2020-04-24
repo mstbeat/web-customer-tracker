@@ -15,20 +15,23 @@
 		</div>
 	</div>
 	<div id="container">
-		<table>
-			<tr>
-				<th>First Name</th>
-				<th> Last Name</th>
-				<th>Email</th>
-			</tr>
-			<c:forEach var="tempCustomer" items="${customers}">
+		<div id="content">
+			<input type="button" value="Add Customer" onclick="window.location.href='showFormForAdd'; return false;" class="add-button" />
+			<table>
 				<tr>
-					<td>${tempCustomer.firstName}</td>
-					<td>${tempCustomer.lastName}</td>
-					<td>${tempCustomer.email}</td>
+					<th>First Name</th>
+					<th> Last Name</th>
+					<th>Email</th>
 				</tr>
-			</c:forEach>
-		</table>
+				<c:forEach var="tempCustomer" items="${customers}">
+					<tr>
+						<td>${tempCustomer.firstName}</td>
+						<td>${tempCustomer.lastName}</td>
+						<td>${tempCustomer.email}</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
 	</div>
 </body>
 </html>
